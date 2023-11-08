@@ -1,14 +1,10 @@
-variable "do_token" {
-  default = "dop_v1_your_beautiful_token_here"
-}
-
 variable "ssh_key_ids" {
-  default = []
-  type = list(number)
+  default = ["eb:1d:63:ed:fa:4a:de:ec:48:6e:c5:17:c5:f0:f8:66"]
+  type = list(string)
 }
 
 variable "project_uuid" {
-  default = ""
+  default = "c804f5f5-09aa-44b9-a0f7-8776d8ae5211"
 }
 
 variable "droplet_size_slug" {
@@ -21,11 +17,11 @@ variable "tag_list" {
 }
 
 variable "region" {
-  default = "nyc3"
+  default = "fra1"
 }
 
 variable "project_url" {
-  default = ""
+  default = "https://cloud.digitalocean.com/projects/c804f5f5-09aa-44b9-a0f7-8776d8ae5211/resources?i=87246d"
 }
 
 variable "api_host" {

@@ -8,6 +8,6 @@ terraform {
 }
 
 provider "digitalocean" {
-  token = var.do_token
+  token = file("do_token.txt")
   api_endpoint = var.api_host
 }
