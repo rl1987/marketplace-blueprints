@@ -1,3 +1,6 @@
+# terraform plan -var="do_token=$(cat do_token.txt)"
+# terraform apply -var="do_token=$(cat do_token.txt)"
+# https://developer.hashicorp.com/terraform/language/values/variables
 variable "do_token" {
   default = "dop_v1_your_beautiful_token_here"
 }
