@@ -90,3 +90,9 @@ resource "digitalocean_droplet" "elasticsearch" {
 
     EOF
 }
+
+resource "digitalocean_domain" "elasticsearch" {
+  name       = "elasticsearch.keyspace.dev"
+  ip_address = resource.digitalocean_droplet.elasticsearch.ipv4_address
+}
+

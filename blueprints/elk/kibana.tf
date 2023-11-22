@@ -55,3 +55,9 @@ resource "digitalocean_droplet" "kibana" {
 
     EOF
 }
+
+resource "digitalocean_domain" "kibanan" {
+  name       = "kibana.keyspace.dev"
+  ip_address = resource.digitalocean_droplet.kibana.ipv4_address
+}
+

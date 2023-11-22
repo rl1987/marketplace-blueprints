@@ -98,3 +98,10 @@ resource "digitalocean_droplet" "logstash" {
 
       EOF
 }
+
+
+resource "digitalocean_domain" "logstash" {
+  name       = "logstash.keyspace.dev"
+  ip_address = resource.digitalocean_droplet.logstash.ipv4_address
+}
+
