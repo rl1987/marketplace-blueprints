@@ -56,7 +56,7 @@ resource "digitalocean_droplet" "kibana" {
     EOF
 }
 
-resource "digitalocean_domain" "kibanan" {
+resource "digitalocean_domain" "kibana" {
   name       = "kibana.keyspace.dev"
   ip_address = resource.digitalocean_droplet.kibana.ipv4_address
 }
